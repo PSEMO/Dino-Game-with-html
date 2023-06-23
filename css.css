@@ -1,0 +1,85 @@
+body
+{
+    background-color: darkgray;
+}
+
+#game
+{
+    width: 1000px;
+    height: 500px;
+    border: 5px solid black;
+    margin: auto;
+    background-color: gray;
+}
+
+#player
+{
+    width: 32px;
+    height: 32px;
+    background-image: url(tile000.png);
+    background-size: 32px 32px;
+    position: relative;
+    top: 468px;
+}
+
+#spike
+{
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 452px;
+    left: 984px;
+    background-image: url(Idle.png);
+
+    animation: spike 4s infinite linear;
+}
+
+#score
+{
+    padding-left: 500px;
+    float: left;
+    position: relative;
+}
+
+.jump
+{
+    animation: jump 0.65s linear;
+}
+
+.runAnim
+{
+    animation: run 0.7s infinite linear;
+}
+
+@keyframes jump
+{
+    0% { top: 468px; }
+    16.66% { top: 438px; }
+    33.33% { top: 418px; }
+    50% { top: 408px; }
+    66.66% { top: 418px; }
+    83.33% { top: 438px; }
+    100% { top: 468px; }
+}
+
+@keyframes run
+{
+    0% { background-image: url(tile000.png); }
+    9.09% { background-image: url(tile001.png); }
+    18.18% { background-image: url(tile002.png); }
+    27.27% { background-image: url(tile003.png); }
+    36.36% { background-image: url(tile004.png); }
+    45.45% { background-image: url(tile005.png); }
+    54.54% { background-image: url(tile006.png); }
+    63.63% { background-image: url(tile007.png); }
+    72.72% { background-image: url(tile008.png); }
+    81.81% { background-image: url(tile009.png); }
+    90.9% { background-image: url(tile010.png); }
+    100% { background-image: url(tile011.png); }
+}
+
+@keyframes spike
+{
+    0% { left: 984px; }
+    100% { left: 0px; }
+}
